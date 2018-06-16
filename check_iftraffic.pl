@@ -179,10 +179,7 @@ if (
   )
 {
 	while ( $row = <FILE> ) {
-
-		#cosmetic change 20050416 by mw
-		#Couldn't sustain;-)
-		chomp();
+		chomp($row);
 		( $last_check_time, $last_in_bytes, $last_out_bytes ) =
 		  split( ":", $row );
 	}
